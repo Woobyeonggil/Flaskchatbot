@@ -11,7 +11,7 @@ def index():
 @app.route('/chatbot',methods=('POST','GET'))
 def chatbot():
     req= request.get_json(force=True)
-    print(req)
+    print(req + "--")
     #return jsonify(fulfillmentText= '챗봇 접속 성공')
         #{ 'fullfillmentText': '챗봇접속성공'}
     return jsonify(fulfillment_messages=[{
